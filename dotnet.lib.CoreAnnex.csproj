@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BC206B4-6F76-45B2-B181-FCFABEDF65AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>dotnet.lib.CoreAnnex</RootNamespace>
+    <AssemblyName>dotnet.lib.CoreAnnex</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.2.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="auxiliary\BooleanObject.cs" />
+    <Compile Include="auxiliary\ByteHelper.cs" />
+    <Compile Include="auxiliary\Data.cs" />
+    <Compile Include="auxiliary\DataHelper.cs" />
+    <Compile Include="auxiliary\ExceptionHelper.cs" />
+    <Compile Include="auxiliary\IntegerObject.cs" />
+    <Compile Include="auxiliary\LongObject.cs" />
+    <Compile Include="auxiliary\MutableData.cs" />
+    <Compile Include="auxiliary\NumericUtilities.cs" />
+    <Compile Include="auxiliary\NumericUtilitiesUnitTest.cs" />
+    <Compile Include="auxiliary\OperatingSystemUtilities.cs" />
+    <Compile Include="auxiliary\RandomUtilities.cs" />
+    <Compile Include="auxiliary\SecurityUtilities.cs" />
+    <Compile Include="auxiliary\StringHelper.cs" />
+    <Compile Include="log\ConsoleLogDelegate.cs" />
+    <Compile Include="log\DoublingLogDelegate.cs" />
+    <Compile Include="log\Log.cs" />
+    <Compile Include="log\LogDelegate.cs" />
+    <Compile Include="log\LogDelegateHelper.cs" />
+    <Compile Include="log\Loggable.cs" />
+    <Compile Include="log\LogHelper.cs" />
+    <Compile Include="log\ReleaseLogDelegate.cs" />
+    <Compile Include="log\TraceLogDelegate.cs" />
+    <Compile Include="exception\BaseException.cs" />
+    <Compile Include="exception\ErrorCodeUtilities.cs" />
+    <Compile Include="json\DefaultJsonHandler.cs" />
+    <Compile Include="json\JsonArray.cs" />
+    <Compile Include="json\JsonArrayHelper.cs" />
+    <Compile Include="json\JsonBuilder.cs" />
+    <Compile Include="json\JsonBuilderUnitTest.cs" />
+    <Compile Include="json\JsonDocumentHandler.cs" />
+    <Compile Include="json\JsonObject.cs" />
+    <Compile Include="json\JsonObjectHelper.cs" />
+    <Compile Include="json\JsonObjectUnitTest.cs" />
+    <Compile Include="json\JsonStack.cs" />
+    <Compile Include="json\JsonWalker.cs" />
+    <Compile Include="defaults\CommandLineArgs.cs" />
+    <Compile Include="defaults\Defaults.cs" />
+    <Compile Include="defaults\DefaultsHelper.cs" />
+    <Compile Include="net\HostName.cs" />
+    <Compile Include="net\HostName_Generated.cs" />
+    <Compile Include="net\NetworkAddress.cs" />
+    <Compile Include="net\NetworkAddress_Generated.cs" />
+    <Compile Include="net\NetworkHost.cs" />
+    <Compile Include="io\FileUtilities.cs" />
+    <Compile Include="io\StreamHelper.cs" />
+    <Compile Include="work\Job.cs" />
+    <Compile Include="work\JobListener.cs" />
+    <Compile Include="work\ListenedJob.cs" />
+    <Compile Include="work\Worker.cs" />
+    <Compile Include="work\WorkManager.cs" />
+    <Compile Include="work\WorkQueue.cs" />
+    <Compile Include="json.output\JsonOutput.cs" />
+    <Compile Include="json.output\JsonStreamOutput.cs" />
+    <Compile Include="json.output\JsonStringOutput.cs" />
+    <Compile Include="json.output\JsonWriter.cs" />
+    <Compile Include="json.output\JsonWriterUnitTest.cs" />
+    <Compile Include="json.input\JsonDataInput.cs" />
+    <Compile Include="json.input\JsonInput.cs" />
+    <Compile Include="json.input\JsonInputHelper.cs" />
+    <Compile Include="json.input\JsonReader.cs" />
+    <Compile Include="json.input\MutableDataPool.cs" />
+    <Compile Include="json.handlers\JsonArrayHandler.cs" />
+    <Compile Include="json.handlers\JsonBooleanHandler.cs" />
+    <Compile Include="json.handlers\JsonHandler.cs" />
+    <Compile Include="json.handlers\JsonNullHandler.cs" />
+    <Compile Include="json.handlers\JsonNumberHandler.cs" />
+    <Compile Include="json.handlers\JsonObjectHandler.cs" />
+    <Compile Include="json.handlers\JsonStringHandler.cs" />
+    <Compile Include="json.handlers\JsonStringHandlerUnitTest.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="auxiliary\" />
+    <Folder Include="log\" />
+    <Folder Include="exception\" />
+    <Folder Include="json\" />
+    <Folder Include="defaults\" />
+    <Folder Include="net\" />
+    <Folder Include="io\" />
+    <Folder Include="work\" />
+    <Folder Include="json.handlers\" />
+    <Folder Include="json.input\" />
+    <Folder Include="json.output\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
