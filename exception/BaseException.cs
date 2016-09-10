@@ -45,9 +45,18 @@ namespace dotnet.lib.CoreAnnex.exception
             set { _faultCode = value; }
         }
 
-        ///////////////////////////////////////////////////////////////////////
-        // 
-        private Object _originator;
+		///////////////////////////////////////////////////////////////////////
+		//
+		private int _faultSubCode;
+		public int FaultSubCode
+		{
+			get { return _faultSubCode; }
+			set { _faultSubCode = value; }
+		}
+
+		///////////////////////////////////////////////////////////////////////
+		// 
+		private Object _originator;
         protected Object Originator
         {
             get { return _originator; }
