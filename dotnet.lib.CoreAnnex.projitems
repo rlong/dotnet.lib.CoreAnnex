@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{5F17B6F4-F331-4B5F-8548-C67D11902DA2}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>dotnet.lib.CoreAnnex</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\BooleanObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\ByteHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\DataHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\ExceptionHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\IntegerObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\LongObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\MutableData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\NumericUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\NumericUtilitiesUnitTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\OperatingSystemUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\RandomUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\SecurityUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)auxiliary\StringHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)defaults\CommandLineArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)defaults\Defaults.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)defaults\DefaultsHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)exception\BaseException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)exception\ErrorCodeUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)io\FileUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)io\StreamHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json\DefaultJsonHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json\JsonArray.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json\JsonArrayHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json\JsonBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json\JsonBuilderUnitTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json\JsonDocumentHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json\JsonObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json\JsonObjectHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json\JsonObjectUnitTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json\JsonStack.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json\JsonWalker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.handlers\JsonArrayHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.handlers\JsonBooleanHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.handlers\JsonHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.handlers\JsonNullHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.handlers\JsonNumberHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.handlers\JsonObjectHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.handlers\JsonStringHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.handlers\JsonStringHandlerUnitTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.input\JsonDataInput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.input\JsonInput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.input\JsonInputHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.input\JsonReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.input\MutableDataPool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.output\JsonOutput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.output\JsonStreamOutput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.output\JsonStringOutput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.output\JsonWriter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)json.output\JsonWriterUnitTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)log\ConsoleLogDelegate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)log\DoublingLogDelegate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)log\Log.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)log\LogDelegate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)log\LogDelegateHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)log\LogHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)log\Loggable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)log\ReleaseLogDelegate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)log\TraceLogDelegate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)net\HostName.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)net\HostName_Generated.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)net\NetworkAddress.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)net\NetworkAddress_Generated.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)net\NetworkHost.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)work\Job.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)work\JobListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)work\ListenedJob.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)work\WorkManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)work\WorkQueue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)work\Worker.cs" />
+  </ItemGroup>
+</Project>

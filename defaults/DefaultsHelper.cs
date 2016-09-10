@@ -38,8 +38,11 @@ namespace dotnet.lib.CoreAnnex.defaults
 
                 String environmentName = scope.Replace('.', '_');
 
-                // ^^^ http://stackoverflow.com/questions/2821043/allowed-characters-in-linux-environment-variable-names
-                String environmentValue = Environment.GetEnvironmentVariable(environmentName, EnvironmentVariableTarget.Process);
+				// ^^^ http://stackoverflow.com/questions/2821043/allowed-characters-in-linux-environment-variable-names
+
+				//String environmentValue = Environment.GetEnvironmentVariable(environmentName, EnvironmentVariableTarget.Process);
+				String environmentValue = Environment.GetEnvironmentVariable(environmentName); 
+
                 if (null != environmentValue)
                 {
                     log.debug(environmentValue, "environmentVariable");
