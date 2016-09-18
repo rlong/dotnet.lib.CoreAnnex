@@ -110,4 +110,8 @@ namespace dotnet.lib.CoreAnnex.json
             JsonReader.read(jsonInput, builder);
         }
     }
+
+#if NUNIT
+#endif
+
 }

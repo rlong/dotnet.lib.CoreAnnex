@@ -12,7 +12,7 @@ using dotnet.lib.CoreAnnex.exception;
 
 namespace dotnet.lib.CoreAnnex.auxiliary
 {
-
+#if NUNIT
     [TestFixture]
     public class NumericUtilitiesUnitTest
     {
@@ -54,4 +54,6 @@ namespace dotnet.lib.CoreAnnex.auxiliary
         }
 
     }
+#endif
+
 }
