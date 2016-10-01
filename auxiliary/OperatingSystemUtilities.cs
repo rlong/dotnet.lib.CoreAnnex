@@ -6,7 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using dotnet.lib.CoreAnnex.log;
+using lib.CoreAnnex.log;
 using System.IO;
 using dotnet.lib.CoreAnnex.auxiliary;
 

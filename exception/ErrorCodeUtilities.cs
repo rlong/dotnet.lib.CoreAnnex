@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Security.Cryptography;
-using dotnet.lib.CoreAnnex.log;
+using lib.CoreAnnex.log;
 
 namespace dotnet.lib.CoreAnnex.exception
 {

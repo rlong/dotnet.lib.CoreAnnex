@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
-using dotnet.lib.CoreAnnex.log;
+using lib.CoreAnnex.log;
 using dotnet.lib.CoreAnnex.json;
 
 namespace dotnet.lib.CoreAnnex.json.output

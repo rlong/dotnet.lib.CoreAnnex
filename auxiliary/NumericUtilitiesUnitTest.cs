@@ -7,7 +7,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using dotnet.lib.CoreAnnex.log;
+using lib.CoreAnnex.log;
 using dotnet.lib.CoreAnnex.exception;
 
 namespace dotnet.lib.CoreAnnex.auxiliary
