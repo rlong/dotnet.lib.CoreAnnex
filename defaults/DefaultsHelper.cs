@@ -26,7 +26,7 @@ namespace dotnet.lib.CoreAnnex.defaults
                 String argumentValue = commandLineArgs.GetArgument(scope);
                 if (null != argumentValue)
                 {
-                    log.debug(argumentValue, "argumentValue");
+                    log.Debug(argumentValue, "argumentValue");
                     JsonObject environment = JsonObjectHelper.FromString(argumentValue);
                     return new Defaults(environment);
                 }
@@ -45,7 +45,7 @@ namespace dotnet.lib.CoreAnnex.defaults
 
                 if (null != environmentValue)
                 {
-                    log.debug(environmentValue, "environmentVariable");
+                    log.Debug(environmentValue, "environmentVariable");
                     JsonObject environment = JsonObjectHelper.FromString(environmentValue);
                     return new Defaults(environment);
                 }

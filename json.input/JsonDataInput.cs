@@ -52,7 +52,7 @@ namespace dotnet.lib.CoreAnnex.json.input
 
         public bool hasNextByte()
         {
-            if (1 + _cursor >= _data.getCount())
+            if (1 + _cursor >= _data.GetCount())
             {
                 return false;
             }

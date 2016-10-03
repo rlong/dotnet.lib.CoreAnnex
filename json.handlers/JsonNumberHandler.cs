@@ -69,7 +69,7 @@ namespace dotnet.lib.CoreAnnex.json.handlers
                     }
 
                     // fallen through ... none of the chars above matched
-                    String stringValue = data.getUtf8String(0, data.getCount());
+                    String stringValue = data.getUtf8String(0, data.GetCount());
 
                     if (isFloat)
                     {
@@ -77,7 +77,7 @@ namespace dotnet.lib.CoreAnnex.json.handlers
                     }
                     else
                     {
-                        long longValue = NumericUtilities.parseLong(stringValue);
+                        long longValue = NumericUtilities.ParseLong(stringValue);
                         if (longValue > int.MaxValue || longValue < int.MinValue)
                         {
                             return longValue;

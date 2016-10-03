@@ -38,7 +38,7 @@ namespace dotnet.lib.CoreAnnex.json.handlers
 
                     if ('"' == b)
                     {
-                        String answer = data.getUtf8String(0, data.getCount());
+                        String answer = data.getUtf8String(0, data.GetCount());
 
                         input.nextByte(); // move past the '"'
 

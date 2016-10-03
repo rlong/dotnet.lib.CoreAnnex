@@ -29,7 +29,5 @@ namespace dotnet.lib.CoreAnnex.auxiliary
             }
             return answer.ToString();
         }
-
-
-    }
+	}
 }

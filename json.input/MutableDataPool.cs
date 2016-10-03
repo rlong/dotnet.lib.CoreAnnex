@@ -68,7 +68,7 @@ namespace dotnet.lib.CoreAnnex.json.input
 
             _mutableDataPoolIndex--;
 
-            _mutableDataPool[_mutableDataPoolIndex].clear();
+            _mutableDataPool[_mutableDataPoolIndex].Clear();
             return;
         }
 

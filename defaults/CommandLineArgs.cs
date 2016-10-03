@@ -28,14 +28,14 @@ namespace dotnet.lib.CoreAnnex.defaults
             String[] commandLineArgs = Environment.GetCommandLineArgs();
             foreach (String commandLineArg in commandLineArgs)
             {
-                log.debug(commandLineArg, "commandLineArg");
+                log.Debug(commandLineArg, "commandLineArg");
                 int indexOfEquals = commandLineArg.IndexOf('=');
                 if (-1 != indexOfEquals )
                 {
                     String name = commandLineArg.Substring(0, indexOfEquals);
-                    log.debug(name, "name");
+                    log.Debug(name, "name");
                     String value = commandLineArg.Substring(indexOfEquals+1 ); // '+1' to skip over the '='
-                    log.debug(value, "value");
+                    log.Debug(value, "value");
                     _commandLineArgs[name] = value;
                 }
             }

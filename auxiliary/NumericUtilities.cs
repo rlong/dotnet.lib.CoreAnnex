@@ -13,35 +13,47 @@ namespace dotnet.lib.CoreAnnex.auxiliary
     public class NumericUtilities
     {
 
-        public static int parseInteger(String integerValue)
+
+		public static int ParseInteger(String integerValue)
+		{
+			try
+			{
+				return Int32.Parse(integerValue);
+			}
+			catch (Exception e)
+			{
+
+				String technicalError = String.Format("failed to parse '{0}' as an integer", integerValue);
+
+				throw new BaseException(e, typeof(NumericUtilities), technicalError);
+			}
+		}
+
+		[Obsolete("deprecated, use `ParseInteger` instead.")]
+		public static int parseInteger(String integerValue)
         {
-            try
-            {
-                return Int32.Parse(integerValue);
-            } catch( Exception e ) {
-
-                String technicalError = String.Format( "failed to parse '{0}' as an integer", integerValue);
-
-                throw new BaseException(e, typeof(NumericUtilities), technicalError);
-            }
-
+			return ParseInteger(integerValue);
         }
 
 
-        public static long parseLong(String longValue)
+		public static long ParseLong(String longValue)
+		{
+			try
+			{
+				return Int64.Parse(longValue);
+			}
+			catch (Exception e)
+			{
+				String technicalError = String.Format("failed to parse '{0}' as an long", longValue);
+				throw new BaseException(e, typeof(NumericUtilities), technicalError);
+			}
+		}
+
+		[Obsolete("deprecated, use `ParseLong` instead.")]
+		public static long parseLong(String longValue)
         {
-            try
-            {
-                return Int64.Parse(longValue);
-            }
-            catch (Exception e)
-            {
-                String technicalError = String.Format("failed to parse '{0}' as an long", longValue);
-                throw new BaseException(e, typeof(NumericUtilities), technicalError);
-            }
-
+			return ParseLong(longValue);
         }
-
 
         public static float parseFloat(String floatValue)
         {

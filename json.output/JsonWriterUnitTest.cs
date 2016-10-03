@@ -40,7 +40,7 @@ namespace dotnet.lib.CoreAnnex.json.output
                 JsonWalker.walk(target, writer);
             }
             String actual = output.ToString();
-            log.debug(actual, "actual");
+            log.Debug(actual, "actual");
             Assert.AreEqual("{}", actual);		
 
         }
@@ -61,7 +61,7 @@ namespace dotnet.lib.CoreAnnex.json.output
                 JsonWalker.walk(target, writer);
             }
             String actual = output.ToString();
-            log.debug(actual, "actual");
+            log.Debug(actual, "actual");
             Assert.AreEqual("[]", actual);
         }
 
@@ -86,7 +86,7 @@ namespace dotnet.lib.CoreAnnex.json.output
             }
 
             String actual = output.ToString();
-            log.debug(actual, "actual");
+            log.Debug(actual, "actual");
             Assert.AreEqual("{\"nullKey\":null,\"booleanKey\":true,\"integerKey\":314,\"stringKey\":\"value\"}", actual);
         }
 
@@ -110,7 +110,7 @@ namespace dotnet.lib.CoreAnnex.json.output
                 JsonWalker.walk(target, writer);
             }
             String actual = output.ToString();
-            log.debug(actual, "actual");
+            log.Debug(actual, "actual");
             Assert.AreEqual("[null,true,314,\"value\"]", actual);
 
         }

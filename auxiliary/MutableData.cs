@@ -90,6 +90,13 @@ namespace dotnet.lib.CoreAnnex.auxiliary
             StreamHelper.write(length,source, _buffer);
         }
 
+
+		public virtual void Clear()
+		{
+			_buffer.SetLength(0);
+		}
+
+		[Obsolete("deprecated, use `Clear` instead.")]
         public virtual void clear()
         {
             _buffer.SetLength(0);

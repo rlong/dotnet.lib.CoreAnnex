@@ -6,7 +6,7 @@
     <SharedGUID>{5F17B6F4-F331-4B5F-8548-C67D11902DA2}</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>dotnet.lib.CoreAnnex</Import_RootNamespace>
+    <Import_RootNamespace>lib.CoreAnnex</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)auxiliary\BooleanObject.cs" />

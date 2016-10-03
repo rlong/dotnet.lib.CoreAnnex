@@ -114,7 +114,13 @@ namespace dotnet.lib.CoreAnnex.auxiliary
 
         }
 
-        public void arraycopy(uint sourceOffset, byte[] destination, uint destinationOffset, uint length)
+		public void Arraycopy(uint sourceOffset, byte[] destination, uint destinationOffset, uint length)
+		{
+			Array.Copy(_buffer.GetBuffer(), sourceOffset, destination, destinationOffset, length);
+		}
+
+		[Obsolete("deprecated, use `Arraycopy` instead (2016-10-01)")]
+		public void arraycopy(uint sourceOffset, byte[] destination, uint destinationOffset, uint length)
         {
             Array.Copy(_buffer.GetBuffer(), sourceOffset, destination, destinationOffset, length);
         }
@@ -125,8 +131,14 @@ namespace dotnet.lib.CoreAnnex.auxiliary
             return _buffer.GetBuffer()[offset];
         }
 
+		public uint GetCount()
+		{
+			seekToStart();
+			return (uint)_buffer.Length;
+		}
 
-        public uint getCount()
+		[Obsolete("deprecated, use `GetCount` instead (2016-10-01)")]
+		public uint getCount()
         {
             seekToStart();
             return (uint)_buffer.Length;
@@ -146,10 +158,10 @@ namespace dotnet.lib.CoreAnnex.auxiliary
             uint count = 16;
             uint upperBound = offset + 16;
 
-            if (upperBound > getCount())
+            if (upperBound > GetCount())
             {
-                upperBound = getCount();
-                count = getCount() - offset;
+                upperBound = GetCount();
+                count = GetCount() - offset;
             }
 
             StringBuilder answer = new StringBuilder(80);
@@ -215,7 +227,7 @@ namespace dotnet.lib.CoreAnnex.auxiliary
 
             List<String> arrayList = new List<String>();
 
-            uint length = getCount();
+            uint length = GetCount();
 
             arrayList.Add("length = " + length);
 

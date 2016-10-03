@@ -129,6 +129,16 @@ namespace lib.CoreAnnex.log
 			_nLog.Log( logLevel, "{0} = {1}", name, value);
 		}
 
+		public void nLog(LogLevel logLevel, DateTime? value, String name)
+		{
+			if (null == value)
+			{
+				_nLog.Log(logLevel, "{0} = NULL", name);
+				return;
+			}
+			_nLog.Log(logLevel, "{0} = {1}", name, value);
+		}
+
 		public void nLog(LogLevel logLevel, int value, String name)
 		{
 			_nLog.Log(logLevel, "{0} = {1}", name, value);
@@ -236,6 +246,7 @@ namespace lib.CoreAnnex.log
         }
 
 
+
         public void debug(bool value, String name)
         {
 			if (!_isDebugEnabled)
@@ -243,6 +254,15 @@ namespace lib.CoreAnnex.log
 				return;
 			}
 			nLog(LogLevel.Debug, value, name );
+		}
+
+		public void Debug(DateTime value, String name)
+		{
+			if (!_isDebugEnabled)
+			{
+				return;
+			}
+			nLog(LogLevel.Debug, value, name);
 		}
 
         public void debug(int value, String name)
@@ -283,7 +303,7 @@ namespace lib.CoreAnnex.log
 
         }
 
-
+		[Obsolete("deprecated, use `Debug` instead (2016-10-02)")]
         public void debug(String value, String name)
         {
 			if (!_isDebugEnabled)
@@ -292,6 +312,16 @@ namespace lib.CoreAnnex.log
 			}
 			nLog(LogLevel.Debug, value, name);
         }
+
+		public void Debug(String value, String name)
+		{
+			if (!_isDebugEnabled)
+			{
+				return;
+			}
+			nLog(LogLevel.Debug, value, name);			
+		}
+
 
         public void debugFormat(String format, params Object[] values)
         {

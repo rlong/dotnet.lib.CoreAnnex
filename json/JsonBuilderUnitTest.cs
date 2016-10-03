@@ -73,7 +73,7 @@ namespace dotnet.lib.CoreAnnex.json
 
         private static JsonInput getJsonInputForFilePath(String filePath)
         {
-            log.debug(Directory.GetCurrentDirectory(), "Directory.GetCurrentDirectory()");
+            log.Debug(Directory.GetCurrentDirectory(), "Directory.GetCurrentDirectory()");
 
             // vvv http://stackoverflow.com/questions/2030847/best-way-to-read-a-large-file-into-byte-array-in-c
             byte[] allBytes = File.ReadAllBytes(filePath);
